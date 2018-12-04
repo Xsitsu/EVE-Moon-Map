@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EVE_Moon_Map", "EVE_Moon_Map.csproj", "{A8BA73DE-ED81-4C79-8CD6-8EA4DF8DB747}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8BA73DE-ED81-4C79-8CD6-8EA4DF8DB747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8BA73DE-ED81-4C79-8CD6-8EA4DF8DB747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8BA73DE-ED81-4C79-8CD6-8EA4DF8DB747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8BA73DE-ED81-4C79-8CD6-8EA4DF8DB747}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38CD26FE-1E10-4762-A39F-55D29DC888C7}
+	EndGlobalSection
+EndGlobal

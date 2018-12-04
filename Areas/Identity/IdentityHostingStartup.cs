@@ -19,8 +19,18 @@ namespace EVE_Moon_Map.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("EVE_Moon_MapContextConnection")));
 
-                services.AddDefaultIdentity<IdentityUser>()
-                    .AddEntityFrameworkStores<EVE_Moon_MapContext>();
+                services.AddIdentity<IdentityUser, IdentityRole>(options =>
+                {
+                    options.Password.RequireDigit = false;
+                    options.Password.RequiredLength = 5;
+                    options.Password.RequireLowercase = false;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+                })
+                .AddRoleManager<RoleManager<IdentityRole>>()
+                .AddDefaultUI()
+                .AddDefaultTokenProviders()
+                .AddEntityFrameworkStores<EVE_Moon_MapContext>();
             });
         }
     }

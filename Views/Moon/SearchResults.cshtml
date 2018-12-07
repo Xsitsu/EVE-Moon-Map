@@ -1,0 +1,16 @@
+﻿@model List<Sector>
+
+@{
+    ViewData["Title"] = "Moons";
+}
+
+<h2>Found Moons</h2>
+
+<div>
+    @{
+        foreach (var sector in Model)
+        {
+            @Html.DisplayFor(model => sector);
+        }
+    }
+</div>

@@ -1,0 +1,12 @@
+﻿@model Moon
+
+<div class="container">
+    <div>
+        @{
+            foreach (Ore ore in Model.GetOres())
+            {
+                @Html.DisplayFor(model => ore);
+            }
+        }
+    </div>
+</div>

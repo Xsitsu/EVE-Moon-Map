@@ -1,0 +1,16 @@
+﻿@model Planet
+
+<div class="container">
+
+    <div>
+        @{
+            foreach (var item in Model.Moons)
+            {
+                Moon moon = item.Value;
+
+                <h4>Planet @Model.Number - Moon @moon.Number</h4>
+                @Html.DisplayFor(model => moon);
+            }
+        }
+    </div>
+</div>

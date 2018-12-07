@@ -1,7 +1,17 @@
-﻿
+﻿@model MoonAddModel
+
 @{
     ViewData["Title"] = "Add";
 }
 
 <h2>Add</h2>
 
+<form method="post" asp-action="Add" asp-controller="Moon">
+    <div class="form-group">
+        <label asp-for="Data" class="control-label"></label>
+        <textarea asp-for="Data" class="form-control"></textarea>
+        <span asp-validation-for="Data"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

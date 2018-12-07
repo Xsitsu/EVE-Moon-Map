@@ -1,7 +1,33 @@
-﻿
+﻿@model MoonSearchModel
+
 @{
     ViewData["Title"] = "Search";
 }
 
 <h2>Search</h2>
 
+<form method="post" asp-action="Search" asp-controller="Moon">
+    <div class="form-group">
+        <label asp-for="SystemName" class="control-label"></label>
+        <input type="text" asp-for="SystemName" class="form-control" />
+        <span asp-validation-for="SystemName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="OreName" class="control-label"></label>
+        <select asp-for="OreName" class="form-control" asp-items="@(new SelectList(Model.OreList))">
+            <option>Any</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="OreTier" class="control-label"></label>
+        <select asp-for="OreTier" class="form-control" asp-items="@(new SelectList(Model.OreTierList))">
+            <option>Any</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Percentage" class="control-label"></label>
+        <input type="text" asp-for="Percentage" class="form-control" />
+        <span asp-validation-for="Percentage"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
